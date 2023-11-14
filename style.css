@@ -1,9 +1,32 @@
+@font-face {
+    font-family: 'Whitney';
+    src: url('./Assets/fonts/whitney-light.otf') format('otf');
+
+    font-family: 'Whitney Medium';
+    src: url('./Assets/fonts/whitney-medium.otf') format('otf');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    overflow-x: hidden;
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 32px;
+
+    & a{
+        font-family: 'Whitney';
+        font-size: 16px;
+        font-weight: 500;
+        color: #000;
+        text-decoration: none;
+    }
+
+    & .link-wrapper{
+        display: flex;
+        gap: 24px;
+    }
 }
