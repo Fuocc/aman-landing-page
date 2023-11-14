@@ -1,9 +1,14 @@
-function Marquee(selector, speed) {
-  const parentSelector = document.querySelector(selector);
+window.addEventListener('load', function () {
+  const parentSelector = document.querySelector('.marquee');
   const clone = parentSelector.innerHTML;
   const firstElement = parentSelector.children[0];
   let i = 0;
   console.log(firstElement);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
   parentSelector.insertAdjacentHTML('beforeend', clone);
   parentSelector.insertAdjacentHTML('beforeend', clone);
 
@@ -12,11 +17,6 @@ function Marquee(selector, speed) {
     if (i > firstElement.clientWidth) {
       i = 0;
     }
-    i = i + speed;
+    i = i + 0.15;
   }, 0);
-}
-
-//after window is completed load
-//1 class selector for marquee
-//2 marquee speed 0.2
-window.addEventListener('load', Marquee('.marquee', 0.2))
+});
