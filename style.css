@@ -6,27 +6,141 @@
     src: url('./Assets/fonts/whitney-medium.otf') format('otf');
 }
 
-*{
+
+/* Global Styling */
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+
+h2{
+    font-family: 'Crimson Pro';
+    font-size: 48px;
+    color: #313131;
+}
+
+
+h3{
+    font-family: 'Crimson Pro';
+    font-size: 40px;
+    color: #313131;
+}
+/* ============================ */
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-nav{
+
+.nav {
+    background-color: #F3EEE7;
+}
+
+
+.nav-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 24px 32px;
+}
 
-    & a{
-        font-family: 'Whitney';
-        font-size: 16px;
-        font-weight: 500;
-        color: #000;
-        text-decoration: none;
-    }
 
-    & .link-wrapper{
-        display: flex;
-        gap: 24px;
+.nav__links {
+    display: flex;
+    column-gap: 24px;
+}
+
+
+.nav__link {
+    font-family: 'Whitney';
+    font-size: 18px;
+    font-weight: 300;
+    color: #313131;
+    text-decoration: none;
+    position: relative;
+}
+
+
+/* Animate state hover for navagation link */
+.nav__link:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    bottom: -4px;
+    left: 0;
+    background-color: #222;
+    transition: transform .3s;
+    transform-origin: bottom right;
+}
+
+
+.nav__link:hover:after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+/* =========================== */
+
+
+.nav__primary-btn {
+    background-color: #E6E2DB;
+    border: 1px solid #4D4C4B;
+    padding: 9px 40px;
+    transition: .25s all;
+
+    &:hover {
+        background-color: #4D4C4B;
+        color: #E6E2DB;
     }
+}
+
+
+/* Hero section */
+.hero{
+    display: flex;
+    justify-content: center;
+    background-image: url('./Assets/images/Hero\ BG.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+    padding: 0 5%;
+}
+
+.hero h1{
+    margin-top: 15vh;
+    font-family: 'Crimson Pro';
+    font-weight: 200;
+    font-size: min(7.5vw, 120px);
+    max-width: 100%;
+    text-wrap: nowrap;
+    text-align: center;
+}
+
+.hero span{
+    padding: 0 22px;
+}
+/* ================================ */
+
+
+/* Marquee section */
+.marquee {
+    overflow: hidden;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+    display: flex;
+}
+
+
+.marquee h2 {
+    white-space: nowrap;
+    text-transform: uppercase;
 }
