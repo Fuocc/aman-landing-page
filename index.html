@@ -6,6 +6,7 @@
 		<title>Document</title>
 		<link rel="stylesheet" href="style.css" />
 		<script src="./script.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap" async defer></script>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -81,6 +82,135 @@
 						</div>
 					</div>
 				</div>
+			</section>
+
+			<section class="accommodation">
+				<div class="accommodation__image">
+					<img src="./Assets/images/blueprint-sketch.png">
+				</div>
+				<div class="accommodation__content">
+					<h2>Accommodation</h2>
+					<div class="sub-titles">
+						<span class="sub-title">Lake Wellness Pool Villa</span>
+						<span>172m<sup>2</span>
+					</div>
+					<div class="properties">
+						<div class="properties__column">
+							<ol>
+								<li>Lake or National Park views</li>
+								<li>Private pool</li>
+								<li>Timber sun deck</li>
+								<li>Double treatment room</li>
+								<li>Jacuzzi</li>
+								<li>Ice fountain</li>
+								<li>Spa pavilion bathroom</li>
+							</ol>
+						</div>
+						
+						<div class="properties__column">
+							<ol>
+								<li>Steam Room</li>
+								<li>Relaxation deck</li>
+								<li>Living area with sofa</li>
+								<li>En suite bathroom</li>
+								<li>Separate shower/toilet</li>
+								<li>Wifi, TV, sound system</li>
+								<li>Personal bar</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="spa">
+				<div class="spa__image">
+					<img src="./Assets/images/spa-wellness.png">
+				</div>
+				<div class="spa__content">
+					<h2>Spa & Wellness</h2>
+					<p>On the shores of a lake dotted with lotus blossoms, the Aman Spa is a place to balance mind and body, where specialist therapists design personalized wellness programms and deliver a wide range of Vietnamese and international treatments in a peerlessly serene and scenic setting. Two secluded Wellness Villas serve as utterly private extensions of the Spa</p>
+					<a href="#" class="button">Make a reservation <span><img src="./Assets/images/arrow-right.svg"></span></a>
+				</div>
+			</section>
+
+			<section class="activities">
+				<div class="activities--container">
+					<div class="activities__content">
+					<h2>Family Activities</h2>
+					<p>With a daily programme of activities from coconut-leaf weaving and sand sculpture, to beach volleyball tournaments, fishing excursions and movie nights, Amanoi ensures that children and families make the best of memories together.</p>
+					<a href="#" class="button">Make a reservation <span><img src="./Assets/images/arrow-right.svg"></span></a>
+				</div>
+				<div class="activities__image">
+					<img src="./Assets/images/activities.png">
+				</div>
+				</div>
+			</section>
+
+			<section class="dinning">
+				<div class="dinning__image">
+					<img src="./Assets/images/dinning.png">
+				</div>
+				<div class="dinning__content">
+					<h2>Dinning</h2>
+					<p>Amanoi’s three dining venues each enjoy a distinctly different setting - from the Restaurant’s clifftop perch to the Beach Club on the shore. Serving exquisite Vietnamese cuisine – renowned for its use of fresh herbs – as well as refined international dishes. Private dining in spectacular outdoor settings can also be arranged.</p>
+					<a href="#" class="button">Make a reservation <span><img src="./Assets/images/arrow-right.svg"></span></a>
+				</div>
+			</section>
+
+			<section class="cta">
+				<div class="form-booking">
+					<h3>MAKE A RESERVATION</h3>
+					<form action="process_form.php" method="post">
+						<div class="name__field">
+							<label for="name">Full name</label>
+							<input type="text" id="name" name="name" required placeholder="Your name...">
+						</div>
+
+						<div class="phone__field">
+							<label for="phone">Phone number</label>
+							<input type="tel" id="phone" name="phone" required placeholder="(+84) 09012345678">
+						</div>
+
+						<div class="check_in_out--container">
+							<div class="check-in__field">
+								<label for="check_in">Check-in</label>
+								<input type="date" id="check_in" name="check-in" required>
+							</div>
+							<div class="check-out__field">
+								<label for="check_out">Check-out</label>
+								<input type="date" id="check_out" name="check_out" required>
+							</div>
+						</div>
+
+						<button type="submit" class="button">Submit</button>
+					</form>
+
+					<div class="direction">
+						<span>GET DIRECTION</span>
+						<div class="direction__properties">
+							<div class="column--1">
+								<img src="./Assets/images/marker.svg">
+								<ul>
+									<li>Vinh Hy Village</li>
+									<li>Vinh Hai Commune</li>
+									<li>Ninh Thuan Province</li>
+									<li>Vietnam</li>
+								</ul>
+							</div>
+							<div class="column--2">
+								<div class="col_row">
+									<img src="./Assets/images/plane.svg">
+									<span>Cam Ranh Airport (CXR)</span>
+								</div>
+								<div class="col_row">
+									<img src="./Assets/images/car.svg">
+									<span>A 75-minute drive</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="map"></div>
 			</section>
 		</main>
 	</body>

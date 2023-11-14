@@ -20,3 +20,20 @@ window.addEventListener('load', function () {
     i = i + 0.15;
   }, 0);
 });
+
+
+
+// function show Google Maps
+function initMap(){
+  const myLocate = {lat: 11.709130965635119, lng: 109.19762399602159}
+  const map = new google.maps.Map(document.getElementById('map'),{
+    center: myLocate,
+    zoom: 16
+  });
+
+  const marker = new google.maps.Marker({
+    position: myLocate,
+    map: map,
+    title: 'Amanoi'
+  });
+}

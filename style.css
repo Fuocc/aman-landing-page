@@ -30,10 +30,20 @@ h3 {
 }
 
 
-p {
+span {
     font-family: 'EB Garamond';
     font-size: 16px;
+    font-weight: 400;
     line-height: 24px;
+    color: #313131;
+}
+
+
+p {
+    font-family: 'EB Garamond';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
     color: #313131;
 }
 
@@ -44,11 +54,14 @@ p {
     gap: 50px;
     padding: 12px 22px;
     border: 1px solid #222;
-    background-color: #F3EEE7;
     font-family: 'Crimson Pro';
     font-size: 16px;
     font-weight: 400;
     width: max-content;
+
+    & span {
+        height: 22px;
+    }
 }
 
 /* ============================ */
@@ -189,12 +202,12 @@ p {
 .about--container {
     width: 100%;
     max-width: 1440px;
-    margin: 0 auto; 
+    margin: 0 auto;
     padding: 12% 6%;
 }
 
 
-.about__top{
+.about__top {
     display: flex;
     justify-content: space-between;
     gap: 120px;
@@ -202,7 +215,7 @@ p {
 }
 
 
-.top__content{
+.top__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
@@ -215,17 +228,17 @@ p {
 }
 
 
-.top__image{
+.top__image {
     width: 60%;
 }
 
 
-.top__image img{
+.top__image img {
     width: 100%;
 }
 
 
-.about__bottom{
+.about__bottom {
     display: flex;
     align-items: end;
     justify-content: end;
@@ -233,20 +246,301 @@ p {
 }
 
 
-.bottom__image{
+.bottom__image {
     width: 55%;
 }
 
 
-.bottom__image img{
+.bottom__image img {
     width: 100%;
 }
 
 
-.bottom__content{
+.bottom__content {
     width: 45%;
     margin-bottom: -50px;
     padding-left: 100px;
 }
 
+/* ================================== */
+
+
+/* Accommodation section */
+.accommodation {
+    width: 100%;
+    max-width: 1440px;
+    margin: 130px auto 0;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+
+.accommodation__image {
+    width: 40%;
+}
+
+
+.accommodation__content {
+    width: 60%;
+}
+
+
+.sub-titles {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #313131;
+    border-bottom: 1px solid #313131;
+    padding: 18px 0;
+    margin: 40px 0 64px;
+}
+
+
+.sub-title {
+    text-transform: uppercase;
+}
+
+
+.properties {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.properties__column ol {
+    list-style-type: decimal;
+}
+
+
+.properties__column ol li {
+    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.properties__column:nth-child(1) ol {
+    counter-reset: item 0;
+    list-style: none;
+}
+
+
+.properties__column:nth-child(2) ol {
+    counter-reset: item 7;
+    list-style: none;
+}
+
+
+.properties__column li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+}
+
+/* ================================== */
+
+
+/* Spa section
+    Dinning section
+    Activities section */
+.spa,
+.dinning {
+    width: 100%;
+    max-width: 1440px;
+    margin: 300px auto;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.spa__image,
+.dinning__image,
+.activities__image {
+    width: 40%;
+}
+
+
+.spa__content,
+.dinning__content,
+.activities__content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 60%;
+}
+
+/* ================================== */
+
+
+/* Activities section */
+.activities {
+    background-color: #F3EEE7;
+}
+
+
+.activities--container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 170px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    padding: 10% 6%;
+}
+
+/* ================================== */
+
+
+/* CTA section */
+.cta {
+    width: 100%;
+    max-width: 1440px;
+    margin: 160px auto;
+    padding-left: 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+
+.form-booking {
+    width: 50%;
+}
+
+
+.form-booking form {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    margin-top: 60px;
+}
+
+
+.form-booking form .name__field,
+.form-booking form .phone__field,
+.form-booking form .check-in__field,
+.form-booking form .check-out__field {
+    position: relative;
+}
+
+
+.form-booking form label {
+    position: absolute;
+    top: -12px;
+    left: 16px;
+    background-color: #fff;
+    font-family: 'Crimson Pro';
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+.form-booking form input {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #313131;
+    border-radius: 3px;
+}
+
+
+.form-booking form input::placeholder {
+    font-family: 'Crimson Pro';
+    font-size: 16px;
+    font-weight: 400;
+    color: #31313180;
+}
+
+
+.form-booking form input[type="date"] {
+    font-family: 'Crimson Pro';
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #31313180;
+}
+
+
+.form-booking form .check_in_out--container {
+    display: flex;
+    gap: 20px;
+
+    & .check-in__field,
+    & .check-out__field {
+        width: calc(100% /2);
+    }
+}
+
+
+.form-booking form .button {
+    width: 100%;
+    justify-content: center;
+    text-transform: uppercase;
+    background-color: #E6E2DB;
+    border: 1px solid #4D4C4B;
+    border-radius: 3px;
+    padding: 16px auto;
+    transition: .25s all;
+
+    &:hover {
+        background-color: #4D4C4B;
+        color: #E6E2DB;
+    }
+}
+
+#map {
+    width: 50%;
+    height: 880px;
+}
+
+
+.direction{
+    margin-top: 72px;
+}
+
+
+.direction__properties{
+    display: flex;
+    justify-content: space-between;
+    gap: 64px;
+    border-top: 1px solid #D6D3D1;
+    padding-top: 27px;
+    margin-top: 16px;
+}
+
+.direction__properties .column--1{
+    display: flex;
+    align-items: start;
+    gap: 12px;
+}
+
+
+.direction__properties .column--1 li,
+.direction__properties .column--2 {
+    list-style: none;
+    margin-bottom: 18px;
+    font-family: 'EB Garamond';
+    font-size: 16px;
+    font-weight: 400;
+    color: #313131;
+}
+
+
+.direction__properties .column--2{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+
+.direction__properties .column--2 .col_row{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 /* ================================== */
