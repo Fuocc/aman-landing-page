@@ -262,6 +262,31 @@ p {
     padding-left: 100px;
 }
 
+
+/* ================================= */
+
+
+/* Gallery section */
+.gallery {
+    width: 100%;
+    max-width: 1440px;
+    margin: 130px auto 0;
+    padding: 0 6%;
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.swiper {
+    width: 100%;
+    height: 90vh;
+}
+
+
+
+
+
+
 /* ================================== */
 
 

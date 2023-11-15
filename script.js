@@ -37,3 +37,18 @@ function initMap(){
     title: 'Amanoi'
   });
 }
+
+
+/*Gallery SwiperJS init*/
+document.addEventListener('DOMContentLoaded', function () {
+    var swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      initialSlide: 1,
+      grabCursor: true,
+      loop: true,
+      slideToClickedSlide: true,
+      autoHeight: true,
+    });
+  });
