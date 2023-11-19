@@ -1,40 +1,36 @@
 <?php
-// Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
-    $name = $_POST["name"];
-    $phone = $_POST["phone"];
-    $checkIn = $_POST["check-in"];
-    $checkOut = $_POST["check_out"];
+    // Connect to database
+    $severname = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "hotel_booking";
 
-    // Perform validation if needed
+    $conn = new mysqli($severname, $username, $password, $dbname);
 
-    // Insert data into the database (using mysqli as an example)
-    $servername = "your_server_name";
-    $username = "your_username";
-    $password = "your_password";
-    $dbname = "your_database_name";
 
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+    // Check connect to database
+    if ($conn -> connect_error){
+        die ("Failed to connect to: " . $conn -> connect_error);
     }
 
-    // Prepare and execute SQL query
-    $sql = "INSERT INTO your_table_name (name, phone, check_in, check_out) VALUES ('$name', '$phone', '$checkIn', '$checkOut')";
+    // Take out data from Form
+    $name = $_POST['name'];
+    $phone = $_POST['phone'];
+    $check_in = $_POST['check_in'];
+    $check_out = $_POST['check_out'];
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Record inserted successfully";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+
+    // Insert data into Database
+    $sql = "INSERT INTO bookings (name, phone, check_in, check_out)
+            VALUES ('$name', '$phone', '$check_in', '$check_out')";
+    
+
+    if ($conn -> query($sql) === TRUE){
+        echo "Booking Successful!!";
+    }else {
+        echo "Error: ". $sql . "<br>" . $conn -> error;
     }
 
-    // Close the database connection
-    $conn->close();
-} else {
-    // Handle the case where the form is not submitted
-    echo "Form not submitted";
-}
+    // Close the connect
+    $conn -> close();
 ?>
