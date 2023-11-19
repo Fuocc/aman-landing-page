@@ -93,9 +93,9 @@
           <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide"><img src="./Assets/images/gallery--1.png"></div>
+            <div class="swiper-slide"><img src="./Assets/images/gallery--2.png"></div>
+            <div class="swiper-slide"><img src="./Assets/images/gallery--3.png"></div>
             
           </div>
         </div>
@@ -180,19 +180,19 @@
 					<h3>MAKE A RESERVATION</h3>
 					<form action="./process_form.php" method="post">
 						<div class="name__field">
-							<label for="name">Full name</label>
-							<input type="text" id="name" name="name" required placeholder="Your name...">
+							<label for="fullName">Full name</label>
+							<input type="text" id="fullName" name="fullName" required placeholder="Your name...">
 						</div>
 
 						<div class="phone__field">
-							<label for="phone">Phone number</label>
-							<input type="tel" id="phone" name="phone" required placeholder="(+84) 09012345678">
+							<label for="phoneNumber">Phone number</label>
+							<input type="tel" id="phoneNumber" name="phoneNumber" required placeholder="(+84) 09012345678">
 						</div>
 
 						<div class="check_in_out--container">
 							<div class="check-in__field">
 								<label for="check_in">Check-in</label>
-								<input type="date" id="check_in" name="check-in" required>
+								<input type="date" id="check_in" name="check_in" required>
 							</div>
 							<div class="check-out__field">
 								<label for="check_out">Check-out</label>
@@ -200,7 +200,7 @@
 							</div>
 						</div>
 
-						<button type="submit" class="button" value="Submit">Submit</button>
+						<button type="submit" class="button" name="submit" value="Submit">Submit</button>
 					</form>
 
 					<div class="direction">
