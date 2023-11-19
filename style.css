@@ -74,6 +74,11 @@ p {
 }
 
 
+html{
+    scroll-behavior: smooth;
+}
+
+
 .nav {
     background-color: #F3EEE7;
 }
