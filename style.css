@@ -74,7 +74,7 @@ p {
 }
 
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -84,7 +84,7 @@ html{
 }
 
 
-.nav-container {
+.nav-desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -146,6 +146,10 @@ html{
     }
 }
 
+.mobile-nav {
+    display: none;
+}
+
 
 /* Hero section */
 .hero {
@@ -167,6 +171,10 @@ html{
     max-width: 100%;
     text-wrap: nowrap;
     text-align: center;
+}
+
+.mobile-h1 {
+    display: none;
 }
 
 .hero span {
@@ -287,12 +295,12 @@ html{
 }
 
 
-.swiper-wrapper{
+.swiper-wrapper {
     gap: 3vw;
 }
 
 
-.swiper-slide img{
+.swiper-slide img {
     width: 100%;
     height: 747px;
 }
@@ -535,12 +543,12 @@ html{
 }
 
 
-.direction{
+.direction {
     margin-top: 72px;
 }
 
 
-.direction__properties{
+.direction__properties {
     display: flex;
     justify-content: space-between;
     gap: 64px;
@@ -549,7 +557,7 @@ html{
     margin-top: 16px;
 }
 
-.direction__properties .column--1{
+.direction__properties .column--1 {
     display: flex;
     align-items: start;
     gap: 12px;
@@ -567,16 +575,368 @@ html{
 }
 
 
-.direction__properties .column--2{
+.direction__properties .column--2 {
     display: flex;
     flex-direction: column;
     gap: 32px;
 }
 
 
-.direction__properties .column--2 .col_row{
+.direction__properties .column--2 .col_row {
     display: flex;
     align-items: center;
     gap: 12px;
 }
+
 /* ================================== */
+
+
+
+
+@media only screen and (max-width: 1023px) {
+    .nav-desktop {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 40px 6%;
+    }
+
+    #js-menu-icon {
+        width: 32px;
+    }
+
+    .mobile-nav .mobile__apple-icon,
+    .mobile-nav .hamburger-menu {
+        z-index: 10;
+    }
+
+    .mobile-nav__links {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background-color: #F3EEE7;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+    }
+
+    .mobile-nav ul {
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+    }
+
+    .mobile-nav__links ul li {
+        list-style: none;
+        text-align: center;
+    }
+
+    .mobile-nav__links ul li a {
+        font-size: 2.2rem;
+    }
+
+    .active {
+        display: flex;
+    }
+
+    .hero {
+        height: 70vh;
+    }
+
+
+    /* About section */
+    .about--container {
+        padding: 12% 10%;
+    }
+
+    .about__top {
+        flex-direction: column;
+    }
+
+    .top__content,
+    .top__image {
+        width: 90%;
+    }
+
+    .top__image {
+        align-self: flex-end;
+    }
+
+    .top__image img {
+        width: 80%;
+    }
+
+    .about__bottom {
+        margin-top: -280px;
+        flex-direction: column;
+        align-items: start;
+        gap: 64px;
+    }
+
+    .bottom__content,
+    .bottom__image {
+        width: 90%;
+        padding: 0;
+    }
+
+    .bottom__image img {
+        width: 60%;
+    }
+
+    /* ================================= */
+
+    /* Gallery section */
+    .swiper {
+        height: 100%;
+    }
+
+    .swiper-slide img {
+        height: 500px;
+    }
+
+    /* ================================= */
+
+    /* Accommodation section */
+    .accommodation {
+        flex-direction: column;
+        padding: 0 10%;
+    }
+
+    .accommodation__image {
+        align-self: center;
+        width: auto;
+    }
+
+    .accommodation__content {
+        width: 90%;
+    }
+
+    /* ================================= */
+
+    /* Spa section
+        Dinning section
+        Activities section */
+
+    .spa,
+    .dinning {
+        padding: 0 10%;
+        gap: 50px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .spa__image,
+    .dinning__image,
+    .activities__image {
+        width: 80%;
+    }
+
+    .spa__image img,
+    .dinning__image img,
+    .activities__image img {
+        width: 100%;
+    }
+
+    .spa__content,
+    .dinning__content,
+    .activities__content {
+        width: 80%;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* ================================== */
+
+
+    /* Activities section */
+    .activities--container {
+        flex-direction: column-reverse;
+    }
+
+    /* ================================== */
+
+    /*CTA section*/
+    .cta {
+        flex-direction: column;
+        padding: 0 10%;
+    }
+
+    .form-booking {
+        width: 90%;
+    }
+
+    #map {
+        width: 90%;
+    }
+
+    /* ================================== */
+}
+
+
+@media only screen and (max-width: 767px) {
+
+    /* Global Styling */
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+
+    span {
+        font-size: .9rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    /* ================================== */
+
+
+    .mobile-nav {
+        padding: 40px 10% 0;
+    }
+
+    .mobile__apple-icon img {
+        width: 60%;
+    }
+
+    #js-menu-icon {
+        width: 22px;
+    }
+
+    .desktop-h1 {
+        display: none;
+    }
+
+    .mobile-h1 {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .mobile-h1 span {
+        display: block;
+        margin-bottom: 12px;
+    }
+
+
+    /* About section */
+    .about--container {
+        padding-bottom: 30%;
+    }
+
+    .top__content,
+    .top__image {
+        width: 100%;
+    }
+
+    .top__image img {
+        width: 100%;
+    }
+
+    .about__bottom {
+        margin-top: -230px;
+    }
+
+    .bottom__content,
+    .bottom__image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .bottom__image img {
+        width: 70%;
+    }
+
+    /* ================================== */
+
+
+    /* Gallery section */
+    .swiper-slide img {
+        height: 250px;
+    }
+
+    /* ================================= */
+
+
+    /* Accommodation section */
+    .accommodation__image img {
+        width: 90%;
+    }
+
+    .accommodation__content {
+        width: 100%;
+    }
+
+    .properties {
+        flex-direction: column;
+    }
+
+    /* ================================= */
+
+
+    /* Spa section
+            Dinning section
+            Activities section */
+
+    .spa__image,
+    .dinning__image,
+    .activities__image {
+        width: 100%;
+    }
+
+    .spa__content,
+    .dinning__content,
+    .activities__content {
+        width: 100%;
+        text-align: left;
+        align-items: start;
+    }
+
+    /* ================================== */
+
+
+    /*CTA section*/
+    .cta {
+        padding: 0;
+    }
+
+    .form-booking {
+        padding: 0 10%;
+        width: 100%;
+    }
+
+    #map {
+        width: 100%;
+    }
+
+    .direction__properties {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-booking form .check_in_out--container {
+        flex-direction: column;
+        gap: 44px;
+
+        & .check-in__field,
+        & .check-out__field {
+            width: 100%;
+        }
+    }
+
+    /* ================================== */
+}

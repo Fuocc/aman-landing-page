@@ -17,7 +17,7 @@
 	</head>
 	<body>
 		<nav class="nav">
-			<div class="nav-container">
+			<div class="nav-desktop">
 				<div class="nav__links">
 					<a href="#about" class="nav__link">About</a>
 					<a href="#accommodation" class="nav__link">Accommodation</a>
@@ -28,16 +28,39 @@
 
 				<a href="#cta" class="nav__primary-btn">Reserve a room</a>
 			</div>
+
+			<!-- Mobile Navigation -->
+			<div class="mobile-nav">
+				<a href="homepage.html" class="mobile__apple-icon"
+							><img src="./Assets/images/Aman logo.svg"
+						/></a>
+				<a href="#" id="js-hamburger-trigger" class="hamburger-menu">
+					<img src="./Assets/images/mobile-menu.svg" id="js-menu-icon">
+				</a>
+				<div class="mobile-nav__links" id="mobile-nav__links">
+					<ul>
+						<li><a href="homepage.html">About</a></li>
+						<li><a href="product_archive.html">Accommodation</a></li>
+						<li><a href="support.html">Activities</a></li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 
 		<main>
 			<section class="hero">
-				<h1>
+				<h1 class="desktop-h1">
 					Amanoi<span
 						><img
 							src="./Assets/images/hero-location.svg"
 							alt="" /></span
 					>Wellness Retreat
+				</h1>
+
+				<h1 class="mobile-h1">
+					<span><img
+							src="./Assets/images/hero-location.svg"
+							alt="" /></span>Amanoi Wellness Retreat
 				</h1>
 			</section>
 
