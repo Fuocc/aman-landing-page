@@ -78,6 +78,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body{
+    overflow: hidden;
+}
+
 
 .nav {
     background-color: #F3EEE7;
