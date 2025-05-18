@@ -6,6 +6,10 @@
     src: url('./Assets/fonts/whitney-medium.otf') format('otf');
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 /* Global Styling */
 a {
